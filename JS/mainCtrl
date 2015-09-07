@@ -1,0 +1,14 @@
+var myApp = angular.module('friendslist');
+myApp.controller('mainCtrl', function($scope){
+    var myFriends = ['Tami', 'Tony', 'Tommy', 'Trisha', 'Talula'];
+    $scope.friends = myFriends;
+});
+function addFriend(name) {
+    var emptArray = [];
+    name.push(myFriends);
+};
+$scope.friendAdded = function() {
+    var frnd = $scope.newFriend;
+    $scope.friends.push(frnd);
+    $scope.newFriend = '';
+};
